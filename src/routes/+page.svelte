@@ -249,6 +249,9 @@
 					on:click={async () => {
 						checkedSongs[i] = !checkedSongs[i];
 
+						audioEls[i].volume = volume / 100;
+						audioEls[i].play();
+
 						onCheckedSong(i);
 					}}
 				/>

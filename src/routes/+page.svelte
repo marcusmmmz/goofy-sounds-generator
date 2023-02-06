@@ -242,7 +242,7 @@
 <ul>
 	{#each Object.entries(sounds) as [cid, name], i}
 		<li>
-			<label>
+			<label class={audioEls[i]?.paused ? "" : "playing"}>
 				<input
 					type="checkbox"
 					value={checkedSongs[i]}
@@ -320,7 +320,11 @@
 
 	ul li label {
 		color: #d06d17;
-		font-weight: 900;
+		font-weight: bold;
+	}
+
+	ul li label.playing {
+		color: #a40e89;
 	}
 
 	@font-face {
